@@ -39,6 +39,7 @@ export const LoginScreen = () => {
       });
   };
 
+  if (handleSubmit)
     return (
       <>
         <Container>
