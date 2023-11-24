@@ -5,7 +5,7 @@ const api = axios.create({
   baseURL: "https://transcripton-1730885afe9f.herokuapp.com/custom-word",
 });
 
-const token = localStorage.getItem("token") || ""
+const token = JSON.parse(localStorage.getItem("token") || "")
 
 export const getAllWords = async () => {
   console.log(token, 'aq')
