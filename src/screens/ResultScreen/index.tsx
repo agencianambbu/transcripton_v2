@@ -50,7 +50,7 @@ export const ResultScreen = () => {
             </p>
           </InfoContainer>
 
-        <AudioContainer> 
+        {/* <AudioContainer>  */}
             {/* <ReactAudioPlayer
               src={
                 "https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3"
