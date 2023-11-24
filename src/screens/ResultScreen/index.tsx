@@ -12,7 +12,7 @@ import { AudioPlayer } from 'react-audio-play';
 
 
 export const ResultScreen = () => {
-  const { transcriptedText, changeNavStep } = useContext(AppContext);
+  const { transcriptedText, changeNavStep, audioURL } = useContext(AppContext);
 
   const [copied, setCopied] = useState(false);
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ export const ResultScreen = () => {
           </InfoContainer>
 
          <AudioContainer>  
-         <AudioPlayer sliderColor={theme.colors.secondary} src="https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3" />
+         <AudioPlayer sliderColor={theme.colors.secondary} src={audioURL} />
           </AudioContainer>
 
           <ResultText>
