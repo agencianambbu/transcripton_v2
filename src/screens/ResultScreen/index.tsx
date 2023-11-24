@@ -61,7 +61,7 @@ export const ResultScreen = () => {
 
           <div style={{ marginBottom: "4rem"}}>
             <JoditEditor
-              value={content}
+              value={"content"}
               config={config}
               onBlur={handleUpdate}
               onChange={(newContent) => {}}
