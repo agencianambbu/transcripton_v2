@@ -7,7 +7,7 @@ import { SecondaryButton } from "../../components/SecondaryButton";
 import { AppContext } from "../../contexts/AppContext";
 import { useNavigate } from "react-router-dom";
 import { Sidebar } from "../../components/Sidebar";
-// import JoditEditor from "jodit-react";
+import JoditEditor from "jodit-react";
 // import ReactAudioPlayer from "react-audio-player";
 
 export const ResultScreen = () => {
@@ -50,14 +50,14 @@ export const ResultScreen = () => {
             </p>
           </InfoContainer>
 
-          {/* <AudioContainer> */}
-            {/* <ReactAudioPlayer
+        <AudioContainer> 
+            <ReactAudioPlayer
               src={
                 "https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3"
               }
               controls
             />
-          </AudioContainer> */}
+          </AudioContainer>
 
           <div style={{ marginBottom: "4rem"}}>
             {/* <JoditEditor
