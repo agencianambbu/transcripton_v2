@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getToken } from "../utils/getToken";
 
 const api = axios.create({
   baseURL: "https://transcripton-1730885afe9f.herokuapp.com/auth",
@@ -11,7 +12,6 @@ export const login = async (email: string, password: string) => {
 };
 
 export const logout = async (token: string) => {
-  console.log(token);
 
-  await api.post("/logout", { headers: { Authorization: `Bearer ${token}` } });
+  await api.post("/logout", { headers: { Authorization: `Bearer ${getToken()}` } });
 };

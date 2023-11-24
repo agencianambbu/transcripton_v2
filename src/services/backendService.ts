@@ -1,46 +1,41 @@
 import axios from "axios";
 import { IWordSpelling } from "../interfaces/wordInterfaces";
+import { getToken } from "../utils/getToken";
 
 const api = axios.create({
   baseURL: "https://transcripton-1730885afe9f.herokuapp.com/custom-word",
 });
 
-let token = "";
-try {
-  token = JSON.parse(localStorage.getItem("token") || "");
-} catch (error) {
-  console.error("Erro ao fazer parse do token:", error);
-}
+
 export const getAllWords = async () => {
 
   const words = await api.get("/get-all", {
-    headers: { Authorization: `Bearer ${token}` },
+    headers: { Authorization: `Bearer ${getToken()}` },
   });
 
   return words;
 };
 
 export const createWord = async (from: string, to: string ) => {
-  console.log(token)
 
   await api.post(
     "/create",
     { from, to },
     {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: `Bearer ${getToken()}` },
     }
   );
 };
 
 export const deleteWord = async (id: number ) => {
   await api.delete(`/delete-one/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    headers: { Authorization: `Bearer ${getToken()}` },
   });
 };
 
 export const getOneWord = async (id: number ) => {
   const word = await api.get(`/get-one/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    headers: { Authorization: `Bearer ${getToken()}` },
   });
 
   return word;
@@ -56,7 +51,7 @@ export const updateWord = async (
     `/update-one/${id}`,
     { from, to },
     {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: `Bearer ${getToken()}` },
     }
   );
 };

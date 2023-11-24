@@ -20,22 +20,11 @@ export const AppRoutes = () => {
             </ProtectedRoute>
           }
         ></Route>
-        <Route path="/login" element={<LoginScreen />}></Route>
-        <ProtectedRoute>
-          <Route path="/intelligence" element={<InteligenceScreen />}></Route>
-        </ProtectedRoute>
-
-        <ProtectedRoute>
-          <Route path="/result" element={<ResultScreen />}></Route>
-        </ProtectedRoute>
-
-        <ProtectedRoute>
-          <Route path="/error" element={<ErrorScreen />}></Route>
-        </ProtectedRoute>
-
-        <ProtectedRoute>
-          <Route path="/loading" element={<LoadingScreen />}></Route>
-        </ProtectedRoute>
+        <Route path="/login" element={<LoginScreen />}></Route>z
+        <Route path="/intelligence" element={<InteligenceScreen />}></Route>
+        <Route path="/result" element={<ResultScreen />}></Route>
+        <Route path="/error" element={<ErrorScreen />}></Route>
+        <Route path="/loading" element={<LoadingScreen />}></Route>
       </Routes>
     </Router>
   );
