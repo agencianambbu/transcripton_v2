@@ -2,10 +2,10 @@ import axios from "axios";
 import { IWordSpelling } from "../interfaces/wordInterfaces";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:3333/custom-word",
+  baseURL: "https://transcripton-1730885afe9f.herokuapp.com/custom-word",
 });
 
-const token = JSON.parse(localStorage.getItem("token") || "")
+const token = localStorage.getItem("token") || ""
 
 export const getAllWords = async () => {
   console.log(token, 'aq')

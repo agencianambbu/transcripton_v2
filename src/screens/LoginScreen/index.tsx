@@ -39,7 +39,6 @@ export const LoginScreen = () => {
       });
   };
 
-  if (token) return <Navigate to="/" />;
   if (handleSubmit)
     return (
       <>
