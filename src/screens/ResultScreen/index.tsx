@@ -51,21 +51,21 @@ export const ResultScreen = () => {
           </InfoContainer>
 
         <AudioContainer> 
-            <ReactAudioPlayer
+            {/* <ReactAudioPlayer
               src={
                 "https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3"
               }
               controls
             />
-          </AudioContainer>
+          </AudioContainer> */}
 
           <div style={{ marginBottom: "4rem"}}>
-            {/* <JoditEditor
+            <JoditEditor
               value={content}
               config={config}
               onBlur={handleUpdate}
               onChange={(newContent) => {}}
-            /> */}
+            />
           </div>
 
           <Actions>
