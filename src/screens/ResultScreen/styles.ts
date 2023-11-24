@@ -38,8 +38,21 @@ export const TooltipArea = styled.div`
 
 export const AudioContainer = styled.div`
   margin-bottom: 2rem;
+  margin-top: 4rem;
+  width: 100%;
   
-  audio{
-    width: 100%;
+  & > div{
+    max-width: 100%;
+    width: 100%
   }
+`
+
+export const ResultText = styled.div`
+  margin-bottom: 4rem;
+
+
+  .jodit-workplace{
+    max-height: 370px !important; 
+  }
+
 `

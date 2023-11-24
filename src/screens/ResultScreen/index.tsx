@@ -2,13 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { Container, InfoContainer } from "../HomeScreen/styles";
 import { IoIosReturnLeft } from "react-icons/io";
 import { theme } from "../../theme";
-import { Actions, AudioContainer} from "./styles";
+import { Actions, AudioContainer, ResultText} from "./styles";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { AppContext } from "../../contexts/AppContext";
 import { useNavigate } from "react-router-dom";
 import { Sidebar } from "../../components/Sidebar";
 import JoditEditor from "jodit-react";
-// import ReactAudioPlayer from "react-audio-player";
+import { AudioPlayer } from 'react-audio-play';
+
 
 export const ResultScreen = () => {
   const { transcriptedText, changeNavStep } = useContext(AppContext);
@@ -50,23 +51,18 @@ export const ResultScreen = () => {
             </p>
           </InfoContainer>
 
-        {/* <AudioContainer>  */}
-            {/* <ReactAudioPlayer
-              src={
-                "https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3"
-              }
-              controls
-            />
-          </AudioContainer> */}
+         <AudioContainer>  
+         <AudioPlayer sliderColor={theme.colors.secondary} src="https://nambbu.com.br/wp-content/uploads/2022/09/Espera-Telefonica-Atendimento-Eletronico-de-Voz..mp3" />
+          </AudioContainer>
 
-          <div style={{ marginBottom: "4rem"}}>
+          <ResultText>
             <JoditEditor
               value={content}
               config={config}
               onBlur={handleUpdate}
               onChange={(newContent) => {}}
             />
-          </div>
+          </ResultText>
 
           <Actions>
             <SecondaryButton
