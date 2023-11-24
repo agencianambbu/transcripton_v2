@@ -20,7 +20,7 @@ export const AppRoutes = () => {
             </ProtectedRoute>
           }
         ></Route>
-        <Route path="/login" element={<LoginScreen />}></Route>z
+        <Route path="/login" element={<LoginScreen />}></Route>
         <Route path="/intelligence" element={<InteligenceScreen />}></Route>
         <Route path="/result" element={<ResultScreen />}></Route>
         <Route path="/error" element={<ErrorScreen />}></Route>

@@ -19,7 +19,7 @@ import { theme } from "../../theme";
 import { AppContext } from "../../contexts/AppContext";
 import { Sidebar } from "../../components/Sidebar";
 import { IWordSpelling } from "../../interfaces/wordInterfaces";
-import { deleteWord } from "../../services/backendService";
+import { deleteWord, getAllWords, updateWord } from "../../services/backendService";
 import { toast } from "react-toastify";
 
 export const InteligenceScreen = () => {
@@ -33,8 +33,9 @@ export const InteligenceScreen = () => {
     changeModalDeleteState,
   } = useContext(AppContext);
 
-  useEffect(() => {
+  useEffect( () => {
     changeNavStep(4);
+    updateWordList()
   }, []);
 
   const handleDeleteWord = async (id: number) => {
