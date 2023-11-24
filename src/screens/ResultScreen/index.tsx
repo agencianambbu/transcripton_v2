@@ -60,12 +60,12 @@ export const ResultScreen = () => {
           </AudioContainer>
 
           <div style={{ marginBottom: "4rem"}}>
-            <JoditEditor
+            {/* <JoditEditor
               value={"content"}
               config={config}
               onBlur={handleUpdate}
               onChange={(newContent) => {}}
-            />
+            /> */}
           </div>
 
           <Actions>
