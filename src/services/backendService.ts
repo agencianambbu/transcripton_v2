@@ -8,7 +8,6 @@ const api = axios.create({
 const token = JSON.parse(localStorage.getItem("token") || "")
 
 export const getAllWords = async () => {
-  console.log(token, 'aq')
 
   const words = await api.get("/get-all", {
     headers: { Authorization: `Bearer ${token}` },
@@ -18,6 +17,8 @@ export const getAllWords = async () => {
 };
 
 export const createWord = async (from: string, to: string ) => {
+  console.log(token)
+
   await api.post(
     "/create",
     { from, to },
