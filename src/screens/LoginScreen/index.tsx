@@ -39,12 +39,13 @@ export const LoginScreen = () => {
       });
   };
 
-  if (!handleSubmit) {
-    return null; 
+  if (token) return <Navigate to="/" />;
+
+  if(!handleSubmit){
+    return null
   }
-  
-  
-  return (
+
+    return (
       <>
         <Container>
           <Logo />
