@@ -1,5 +1,5 @@
-# Usando uma imagem base do Node.js para construir a aplicação
-FROM node:18 AS build
+# Usando uma imagem base do Node.js
+FROM node:18
 
 # Definindo o diretório de trabalho no contêiner
 WORKDIR /app
@@ -9,10 +9,13 @@ COPY package*.json ./
 COPY yarn.lock ./
 
 # Instalando as dependências
-RUN npm install
+RUN npm install # ou 'yarn install' se estiver usando Yarn
 
 # Copiando o restante do código da aplicação
 COPY . .
 
-# Rodando o build da aplicação para produção
-RUN npm run build
+# Expondo a porta que o Vite utiliza
+EXPOSE 5173
+
+# Configurando o Vite para ouvir em todas as interfaces de rede
+CMD ["npm", "run", "dev", "--", "--host"]
