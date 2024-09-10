@@ -2,10 +2,11 @@
 FROM node:18
 
 # Definindo o diretório de trabalho no contêiner
-WORKDIR /
+WORKDIR /app
 
-# Copiando o package.json e o package-lock.json (se disponível)
+# Copiando o package.json e o package-lock.json (ou yarn.lock se você estiver usando Yarn)
 COPY package*.json ./
+COPY yarn.lock ./
 
 # Instalando as dependências
 RUN npm install
@@ -18,3 +19,4 @@ EXPOSE 5173
 
 # Comando para rodar o app em modo de desenvolvimento
 CMD ["npm", "run", "dev"]
+``
