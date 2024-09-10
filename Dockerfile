@@ -2,7 +2,7 @@
 FROM node:18
 
 # Definindo o diretório de trabalho no contêiner
-WORKDIR /src
+WORKDIR /
 
 # Copiando o package.json e o package-lock.json (se disponível)
 COPY package*.json ./
