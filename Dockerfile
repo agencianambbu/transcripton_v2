@@ -9,7 +9,7 @@ COPY package*.json ./
 COPY yarn.lock ./
 
 # Instalando as dependências
-RUN npm install # ou 'yarn install' se estiver usando Yarn
+RUN npm install
 
 # Copiando o restante do código da aplicação
 COPY . .
