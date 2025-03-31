@@ -1,6 +1,6 @@
 import axios from "axios";
 import { IWordSpelling } from "../interfaces/wordInterfaces";
-const APIKey = "585a987dcf9241a4b7b481db08346463";
+const APIKey = "e51c306d5e0b49da94551c324f49197e";
 const refreshInterval = 5000;
 
 const assembly = axios.create({
